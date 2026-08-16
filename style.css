@@ -1,0 +1,174 @@
+
+* {
+margin: 0px;
+padding: 0px;
+}
+body {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.footer {
+margin-top: auto;
+background-color: black;
+color: white;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+padding: 30px 50px;
+}
+
+.footer-content div {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.footer-content h2 {
+font-size: 20px;
+}
+
+.footer-content h3 {
+font-size: 14px;
+}
+
+.footer-content p {
+color: gray;
+font-size: 14px;
+}
+
+.footer-content a {
+color: gray;
+text-decoration: none;
+font-size: 14px;
+}
+
+.bottom {
+border-top: 1px solid gray;
+text-align: center;
+padding: 10px 0px;
+}
+
+.bottom p {
+color: gray;
+font-size: 12px;
+}
+.forma-intro {
+    width: 100%;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 7%;
+    box-sizing: border-box;
+
+    background-color: #f7f7f7;
+}
+
+
+.intro-text {
+    width: 45%;
+}
+
+.intro-small {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.intro-text h1 {
+    font-size: 55px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.intro-text h2 {
+    font-size: 25px;
+    margin: 10px 0 25px;
+    font-weight: normal;
+}
+
+.intro-description {
+    max-width: 450px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+.intro-btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background-color: #000;
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.intro-btn:hover {
+    background-color: #978f55;
+}
+.intro-image {
+    width: 45%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 0 60px 0 60px;
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.intro-image img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .forma-intro {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 25px;
+    }
+
+    .intro-text {
+        width: 100%;
+    }
+
+    .intro-text h1 {
+        font-size: 40px;
+    }
+    .intro-description {
+        margin: 20px auto 30px;
+    }
+    .intro-image {
+        width: 100%;
+        height: 350px;
+        margin-top: 40px;
+    }
+
+}
