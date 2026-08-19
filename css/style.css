@@ -9,54 +9,8 @@ display: flex;
 flex-direction: column;
 }
 
-/*  Footer  */
-.footer {
-margin-top: auto;
-background-color: black;
-color: white;
-}
+/* Start Intro */
 
-.footer-content {
-display: flex;
-justify-content: space-between;
-padding: 30px 50px;
-}
-
-.footer-content div {
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-
-.footer-content h2 {
-font-size: 20px;
-}
-
-.footer-content h3 {
-font-size: 14px;
-}
-
-.footer-content p {
-color: gray;
-font-size: 14px;
-}
-
-.footer-content a {
-color: gray;
-text-decoration: none;
-font-size: 14px;
-}
-
-.bottom {
-border-top: 1px solid gray;
-text-align: center;
-padding: 10px 0px;
-}
-
-.bottom p {
-color: gray;
-font-size: 12px;
-}
 .forma-intro {
     width: 100%;
     min-height: 500px;
@@ -70,8 +24,6 @@ font-size: 12px;
 
     background-color: #f7f7f7;
 }
-
-/* Intro */
 
 .intro-text {
     width: 45%;
@@ -143,10 +95,200 @@ font-size: 12px;
 .intro-image img:hover {
     transform: scale(1.1);
 }
+/* End Intro */
+
+/* Start Arivalls  */
+.linkArivall{
+    text-decoration: none;
+    opacity: 65%;
+    color: #000;
+}
+.linkArivall:hover {
+    text-decoration: underline;
+    opacity: 100%;
+}
+
+.product-card {
+    transition: transform 0.3s ease;
+  }
+  .product-img-container {
+    overflow: hidden;
+  }
+  .product-img-container img {
+    transition: transform 0.4s ease; 
+  }
+
+  .product-card:hover .product-img-container img {
+    transform: scale(1.08);
+  }
+  .fs-7 {
+    font-size: 0.75rem;
+  }
+
+/* End Arivalls  */
+
+/* Start Third section */
+
+.category-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+
+    display: flex;
+    gap: 15px;
+
+    min-height: 500px;
+}
 
 
 
+.category-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
 
+
+
+.big-card {
+    width: 70%;
+    height: 500px;
+}
+
+
+
+.side-cards {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.small-card {
+    height: calc(50% - 7.5px);
+}
+
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+.card-content {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    z-index: 2;
+
+    color: white;
+}
+
+
+.big-card h2 {
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+
+.small-card h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+}
+
+
+.card-content p {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    margin: 0;
+}
+
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+/* End Third section */
+
+/* Start Footer  */
+.footer {
+margin-top: auto;
+background-color: black;
+color: white;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+padding: 30px 50px;
+}
+
+.footer-content div {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.footer-content h2 {
+font-size: 20px;
+}
+
+.footer-content h3 {
+font-size: 14px;
+}
+
+.footer-content p {
+color: gray;
+font-size: 14px;
+}
+
+.footer-content a {
+color: gray;
+text-decoration: none;
+font-size: 14px;
+}
+
+.bottom {
+border-top: 1px solid gray;
+text-align: center;
+padding: 10px 0px;
+}
+
+.bottom p {
+color: gray;
+font-size: 12px;
+}
+
+/* End Footer  */
+
+/* Start Media */
 @media (max-width: 768px) {
 
     .forma-intro {
@@ -173,4 +315,30 @@ font-size: 12px;
         margin-top: 40px;
     }
 
+        .category-section {
+        flex-direction: column;
+        width: 92%;
+    }
+
+    .big-card {
+        width: 100%;
+        height: 350px;
+    }
+
+    .side-cards {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .small-card {
+        width: 50%;
+        height: 220px;
+    }
+
+    .big-card h2 {
+        font-size: 22px;
+    }
+
 }
+
+/* End Media */
