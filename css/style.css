@@ -306,3 +306,338 @@ font-size: 12px;
     }
 
 }
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+
+    background: #c3c37f;
+
+    color: #090101;
+}
+
+
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.about-hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    filter: brightness(0.55);
+}
+img {
+    width: 300px;
+    transition: 0.4s;
+}
+
+img:hover {
+    transform: scale(1.08);
+}
+
+
+/* Text Over Image */
+
+.about-overlay {
+    position: absolute;
+
+    top: 50%;
+    left: 60px;
+
+    transform: translateY(-50%);
+
+    width: 430px;
+
+    color: rgba(0, 0, 0, 0.236);
+}
+
+
+.about-overlay span {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color: #9b7626;
+}
+
+
+.about-overlay h2 {
+    font-size: 42px;
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+
+.about-overlay p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: #a37c7c;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.about-features {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    background: #f1eded;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.feature-box {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 35px 30px;
+
+    border-right: 1px solid #e5e5e5;
+}
+
+
+.feature-box:last-child {
+    border-right: none;
+}
+
+
+.feature-icon {
+    min-width: 38px;
+    height: 38px;
+
+    border: 1px solid #b99a62;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #b99a62;
+
+    font-size: 18px;
+}
+
+
+.feature-box h3 {
+    margin: 0 0 10px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.feature-box p {
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #777;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-choose {
+    padding: 55px 40px;
+
+    background: #f7f6f2;
+}
+
+
+.why-title {
+    margin-bottom: 35px;
+}
+
+
+.why-title span {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #b99a62;
+}
+
+
+.why-title h2 {
+    margin: 8px 0 0;
+
+    font-size: 28px;
+
+    font-weight: 600;
+}
+
+
+/* Why Items */
+
+.why-items {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.why-box {
+    background: white;
+
+    padding: 25px;
+
+    border: 1px solid #e4e1da;
+
+    transition: 0.3s;
+}
+
+
+.why-box:hover {
+    transform: translateY(-5px);
+
+    border-color: #b99a62;
+}
+
+
+.why-icon {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #c78813;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #328713;
+
+    margin-bottom: 18px;
+}
+
+
+.why-box h3 {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+.why-box p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #dd6215;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        width: 94%;
+    }
+
+
+    .about-hero {
+        height: 380px;
+    }
+
+
+    .about-overlay {
+        left: 30px;
+
+        width: 80%;
+    }
+
+
+    .about-overlay h2 {
+        font-size: 30px;
+    }
+
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .feature-box {
+        border-right: none;
+
+        border-bottom: 1px solid #f1eded;
+    }
+
+
+    .feature-box:last-child {
+        border-bottom: none;
+    }
+
+
+    .why-choose {
+        padding: 40px 20px;
+    }
+
+
+    .why-items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .why-items {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-overlay {
+        left: 20px;
+    }
+
+
+    .about-overlay h2 {
+        font-size: 26px;
+    }
+
+}
