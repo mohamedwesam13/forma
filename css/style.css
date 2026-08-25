@@ -463,107 +463,443 @@ img:hover {
 
     color: #777;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f7f6f2;
+
+    color: #171717;
+}
 
 
 /* =========================
-   WHY CHOOSE US
+   MAIN PAGE
 ========================= */
 
-.why-choose {
-    padding: 55px 40px;
+.cart-page {
+    width: 92%;
+    max-width: 1200px;
 
-    background: #f7f6f2;
+    margin: 60px auto;
 }
 
 
-.why-title {
-    margin-bottom: 35px;
-}
+/* =========================
+   TITLE
+========================= */
 
-
-.why-title span {
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    color: #b99a62;
-}
-
-
-.why-title h2 {
-    margin: 8px 0 0;
-
+.cart-title {
     font-size: 28px;
 
     font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 30px;
 }
 
 
-/* Why Items */
+/* =========================
+   CART CONTAINER
+========================= */
 
-.why-items {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-
-.why-box {
+.cart-container {
     background: white;
 
-    padding: 25px;
+    border: 1px solid #e5e5e5;
+}
 
-    border: 1px solid #e4e1da;
+
+/* =========================
+   CART HEADER
+========================= */
+
+.cart-header {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr
+        40px;
+
+    align-items: center;
+
+    padding: 20px 25px;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   CART ITEM
+========================= */
+
+.cart-item {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr
+        40px;
+
+    align-items: center;
+
+    padding: 22px 25px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    min-height: 130px;
+}
+
+
+/* =========================
+   PRODUCT
+========================= */
+
+.product-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.product-info img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: cover;
+
+    border: 1px solid #eeeeee;
+
+    background: #f5f5f5;
+}
+
+
+.product-info h3 {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.product-info p {
+    font-size: 11px;
+
+    color: #777;
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.product-price,
+.product-total {
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+.quantity {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: fit-content;
+
+    border: 1px solid #ddd;
+}
+
+
+.quantity button {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    background: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+
+.quantity button:hover {
+    background: #f0eee8;
+}
+
+
+.quantity span {
+    width: 28px;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   DELETE
+========================= */
+
+.delete-btn {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    opacity: 0.6;
+
+    transition: 0.2s;
+}
+
+
+.delete-btn:hover {
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.cart-bottom {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   COUPON
+========================= */
+
+.coupon-box {
+    background: white;
+
+    border: 1px solid #e5e5e5;
+
+    padding: 30px;
+}
+
+
+.coupon-box h3 {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+
+.coupon-form {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.coupon-form input {
+    flex: 1;
+
+    height: 42px;
+
+    border: 1px solid #ddd;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+.coupon-form input:focus {
+    border-color: #b99a62;
+}
+
+
+.coupon-form button {
+    padding: 0 22px;
+
+    border: none;
+
+    background: #171717;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
 
     transition: 0.3s;
 }
 
 
-.why-box:hover {
-    transform: translateY(-5px);
-
-    border-color: #b99a62;
+.coupon-form button:hover {
+    background: #b99a62;
 }
 
 
-.why-icon {
-    width: 42px;
-    height: 42px;
+/* =========================
+   SUMMARY
+========================= */
 
-    border: 1px solid #c78813;
+.summary {
+    background: white;
 
-    border-radius: 50%;
+    border: 1px solid #e5e5e5;
 
+    padding: 30px;
+}
+
+
+.summary-row,
+.summary-total {
     display: flex;
 
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    color: #328713;
+    align-items: center;
 
     margin-bottom: 18px;
 }
 
 
-.why-box h3 {
+.summary-row span,
+.summary-total span {
     font-size: 12px;
 
     letter-spacing: 1px;
-
-    margin-bottom: 10px;
 }
 
 
-.why-box p {
-    font-size: 12px;
+.summary-row strong {
+    font-size: 13px;
 
-    line-height: 1.7;
+    font-weight: 500;
+}
 
-    color: #dd6215;
 
-    margin: 0;
+.summary-total {
+    padding-top: 18px;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 5px;
+}
+
+
+.summary-total strong {
+    color: #b99a62;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+.checkout-btn {
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 15px;
+
+    border: none;
+
+    background: #171717;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.checkout-btn:hover {
+    background: #b99a62;
+}
+
+
+/* =========================
+   CONTINUE
+========================= */
+
+.continue-shopping {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.continue-shopping:hover {
+    color: #b99a62;
 }
 
 
@@ -571,54 +907,66 @@ img:hover {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
-    .about-section {
-        width: 94%;
+    .cart-page {
+        width: 95%;
+
+        margin: 35px auto;
     }
 
 
-    .about-hero {
-        height: 380px;
+    .cart-header {
+        display: none;
     }
 
 
-    .about-overlay {
-        left: 30px;
-
-        width: 80%;
-    }
-
-
-    .about-overlay h2 {
-        font-size: 30px;
-    }
-
-
-    .about-features {
+    .cart-item {
         grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        padding: 25px;
     }
 
 
-    .feature-box {
-        border-right: none;
-
-        border-bottom: 1px solid #f1eded;
+    .product-info {
+        width: 100%;
     }
 
 
-    .feature-box:last-child {
-        border-bottom: none;
+    .product-price::before {
+        content: "PRICE: ";
+
+        color: #888;
+
+        font-size: 10px;
     }
 
 
-    .why-choose {
-        padding: 40px 20px;
+    .product-total::before {
+        content: "TOTAL: ";
+
+        color: #888;
+
+        font-size: 10px;
     }
 
 
-    .why-items {
-        grid-template-columns: 1fr 1fr;
+    .quantity {
+        margin: 5px 0;
+    }
+
+
+    .delete-btn {
+        position: absolute;
+
+        right: 25px;
+    }
+
+
+    .cart-bottom {
+        grid-template-columns: 1fr;
     }
 
 }
@@ -626,18 +974,29 @@ img:hover {
 
 @media (max-width: 500px) {
 
-    .why-items {
-        grid-template-columns: 1fr;
+    .cart-title {
+        font-size: 22px;
     }
 
 
-    .about-overlay {
-        left: 20px;
+    .product-info img {
+        width: 65px;
+        height: 65px;
     }
 
 
-    .about-overlay h2 {
-        font-size: 26px;
+    .product-info h3 {
+        font-size: 12px;
+    }
+
+
+    .coupon-form {
+        flex-direction: column;
+    }
+
+
+    .coupon-form button {
+        height: 40px;
     }
 
 }
