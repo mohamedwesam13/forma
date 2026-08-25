@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FORMA STORE - Cart</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css"
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg  ">
+  <div class="container-fluid">   
+  <a class="navbar-brand fw-bold text-light" hre f="#">FORMA STORE</a>
+    <button class="navbar-toggler btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0 mx-auto">
+        <li class="nav-item">
+          <a class="nav-link  fw-bold mx-2   links    " aria-current="page" href="index.html">HOME</a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link  fw-bold mx-2   links" aria-current="page" href="categories.html">CATEGORIES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  fw-bold mx-2   links" aria-current="page" href="aboutus.html">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  fw-bold mx-2    links" aria-current="page" href="contactus.html">CONTACT US</a>
+          </li>
+      </ul>
+
+      <div class="but ms-auto" >
+        <button class="bg-transparent border-0 active fs-5 mx-2 text-light"><i class="bi bi-cart button-css"></i></button>
+        <button id="darkModeToggle" class="dark-mode-toggle mx-2" title="Dark Mode"></button>
+        <button class="btn bg-white logIn" ><a href="login.html"> Login</a></button>
+        <button class="bg-transparent text-white register btn" ><a href="register.html"> Register</a></button>
+
+      </div>
+
+    </div>
+  </div>
+</nav>
+<!-- End Navbar --
+
+    <!-- start cart -->
+
+    <main class="cart-page">
+
+        <h1 class="cart-title">YOUR CART</h1>
+        <section class="cart-container">
+            <div class="cart-header">
+
+                <span>PRODUCT</span>
+                <span>PRICE</span>
+                <span>QUANTITY</span>
+                <span>TOTAL</span>
+                <span></span>
+
+            </div>
+            <div class="cart-item">
+
+                <div class="product-info">
+
+                    <img src="./assets/product_4_gloves.png" alt="Football Jersey">
+
+                    <div>
+                        <h3>Goalkeeper Gloves</h3>
+
+                        <p>Size: L</p>
+                        <p>Color: Red</p>
+                    </div>
+
+                </div>
+
+
+                <div class="product-price">
+                    900 EGP
+                </div>
+
+
+                <div class="quantity">
+
+                    <button class="minus">−</button>
+
+                    <span>2</span>
+
+                    <button class="plus">+</button>
+
+                </div>
+
+
+                <div class="product-total">
+                    900 EGP
+                </div>
+
+
+                <button class="delete-btn">🗑</button>
+
+            </div>
+            <div class="cart-item">
+
+                <div class="product-info">
+
+                    <img src="./assets/product_3_boots.png" alt="Football">
+
+                    <div>
+                        <h3>Nike Football Boots</h3>
+
+                        <p>Size: 5</p>
+                    </div>
+
+                </div>
+
+
+                <div class="product-price">
+                    1400 EGP
+                </div>
+
+
+                <div class="quantity">
+
+                    <button class="minus">−</button>
+
+                    <span>1</span>
+
+                    <button class="plus">+</button>
+
+                </div>
+
+
+                <div class="product-total">
+                    1400 EGP
+                </div>
+
+
+                <button class="delete-btn">🗑</button>
+
+            </div>
+
+            <div class="cart-item">
+
+                <div class="product-info">
+
+                    <img src="./assets/product_2_jersey.png" alt="Football Gloves">
+
+                    <div>
+                        <h3>Liverpool Jersey</h3>
+
+                        <p>Size: L</p>
+                    </div>
+
+                </div>
+
+
+                <div class="product-price">
+                    1200 EGP
+                </div>
+
+
+                <div class="quantity">
+
+                    <button class="minus">−</button>
+
+                    <span>1</span>
+
+                    <button class="plus">+</button>
+
+                </div>
+
+
+                <div class="product-total">
+                    1200 EGP
+                </div>
+
+
+                <button class="delete-btn">🗑</button>
+
+            </div>
+
+        </section>
+
+        <section class="cart-bottom">
+            <div class="coupon-box">
+                <h3>COUPON CODE</h3>
+                <div class="coupon-form">
+                    <input
+                        type="text"
+                        placeholder="Enter coupon code"
+                    >
+                    <button>APPLY</button>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary-row">
+                    <span>SUBTOTAL</span>
+                    <strong>3500 EGP</strong>
+                </div>
+                <div class="summary-row">
+                    <span>SHIPPING</span>
+                    <strong>300 EGP</strong>
+                </div>
+                <div class="summary-total">
+                    <span>TOTAL</span>
+                    <strong>3200 EGP</strong>
+                </div>
+                <button class="checkout-btn">
+                    PROCEED TO CHECKOUT
+                </button>
+                <a href="#" class="continue-shopping">
+                    ‹ &nbsp; CONTINUE SHOPPING
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- end cart -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="./script/script.js"></script>
+<script src="./script/darkmode.js"></script>
+</body>
+
+</html>
