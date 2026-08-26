@@ -17,40 +17,29 @@
     <button class="navbar-toggler btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav  mb-2 mb-lg-0 ">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav  mb-2 mb-lg-0 mx-auto">
         <li class="nav-item">
-          <a class="nav-link  fw-bold mx-2 links    " aria-current="page" href="index.html">HOME</a>
+          <a class="nav-link  fw-bold mx-2   links    " aria-current="page" href="index.html">HOME</a>
         </li>
         
         
         <li class="nav-item">
-          <a class="nav-link active fw-bold mx-2 links" aria-current="page" href="categories.html">CATEGORIES</a>
+          <a class="nav-link  fw-bold mx-2  active links" aria-current="page" href="categories.html">CATEGORIES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  fw-bold mx-2 links" aria-current="page" href="#">TEAMS</a>
+          <a class="nav-link  fw-bold mx-2   links" aria-current="page" href="aboutus.html">ABOUT US</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  fw-bold mx-2 links" aria-current="page" href="#">SALE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link  fw-bold mx-2 links" aria-current="page" href="#">MEDIA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link  fw-bold mx-2 links" aria-current="page" href="aboutus.html">ABOUT US</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link  fw-bold mx-2  links" aria-current="page" href="contactus.html">CONTACT US</a>
+          <a class="nav-link  fw-bold mx-2    links" aria-current="page" href="contactus.html">CONTACT US</a>
           </li>
       </ul>
 
       <div class="but ms-auto" >
-        <button class="bg-transparent border-0 fs-5 mx-2 text-light"><i class="bi bi-search button-css"></i></button>
-        <button class="bg-transparent border-0 fs-5 mx-2 text-light"><i class="bi bi-person-fill button-css"></i></button>
-        <button class="bg-transparent border-0 fs-5 mx-2 text-light"><i class="bi bi-heart button-css"></i></button>
-        <button class="bg-transparent border-0 fs-5 mx-2 text-light"><i class="bi bi-cart button-css"></i></button>
+        <button class="bg-transparent border-0 fs-5 mx-2 cart text-light" aria-label="cart"><a href="cart.html"><i class="bi bi-cart button-css"></a></i></button>
         <button id="darkModeToggle" class="dark-mode-toggle mx-2" title="Dark Mode"></button>
         <button class="btn bg-white logIn" ><a href="login.html"> Login</a></button>
+        <button class="bg-transparent text-white register btn" ><a href="register.html"> Register</a></button>
 
       </div>
 
@@ -59,7 +48,7 @@
 </nav>
 <!-- End Navbar -->
 
-
+ 
 <div class="container-fluid py-5 my-3">
     <div class="row">
     <aside class="col-12 col-lg-2 col-md-4">
@@ -108,19 +97,19 @@
 
             <div class="d-flex gap-2">
 
-                <button  class="btnSize btn btn-sm px-3">
+                <button class="btn btn-dark btn-sm px-3">
                     S
                 </button>
 
-                <button class="btnSize btn btn-sm px-3">
+                <button class="btn btn-outline-secondary btn-sm px-3">
                     M
                 </button>
 
-                <button class="btnSize btn btn-sm px-3">
+                <button class="btn btn-outline-secondary btn-sm px-3">
                     L
                 </button>
 
-                <button class="btnSize btn btn-sm px-3">
+                <button class="btn btn-outline-secondary btn-sm px-3">
                     XL
                 </button>
 
@@ -176,135 +165,318 @@
     </div>
 </aside>
 <section class="col-12 col-md-8">
-<div class="row">
+<div class="row justify-content-end">
 
-    <div class="col-12">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <div class="search-container flex-grow-1 me-3">
-                <input type="text" id="searchInput" class="form-control" placeholder="Search for a product...">
-            </div>
+    <div class="col-12 col-md-9">
+        <div class="mb-4">          
+            <input type="text"id="searchInput"class="form-control"placeholder="Search for a product...">
         </div>
-
 
 <!-- Products -->
 <div class="row g-4">
 
-<div class="col-12 col-md-6 col-lg-4">
-    <div class="product-card-horizontal">
-        <div class="product-image-container">
-            <img src="./assets/product_1_ball.png" alt="Football" class="product-image">
+<!-- Product 1 -->
+<div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="product-card">
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+            <img src="./assets/product_1_ball.png"class="w-100 h-100 object-fit-contain"alt="Football">
         </div>
-        <div class="product-info-container">
-            <small class="product-category">Football</small>
-            <h6 class="product-title">Adidas Football</h6>
-            <div class="product-footer">
-                <span class="product-price">1250 EGP</span>
-                <div class="product-actions">
-                    <button class="btn-add-to-cart">ADD TO CART</button>
-                  
+        <small class="text-muted d-block mt-2">Football</small>
+        <div class="d-flex justify-content-between align-items-center my-1">
+            <h6 class="mb-0">Adidas Football</h6>
+                <span class="fw-bold">
+                1250 EGP</span>
+        </div>
+            <button class="btn btn-outline-dark btn-sm w-100">ADD TO CART</button>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+                </div>
 
 <!-- Product 2 -->
-<div class="col-12 col-md-6 col-lg-4">
-    <div class="product-card-horizontal">
-        <div class="product-image-container">
-            <img src="./assets/product_2_jersey.png" alt="Liverpool Jersey" class="product-image">
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+            <img
+                src="./assets/product_2_jersey.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="Liverpool Jersey">
         </div>
-        <div class="product-info-container">
-            <small class="product-category">Football Jersey</small>
-            <h6 class="product-title">Liverpool Jersey</h6>
-            <div class="product-footer">
-                <span class="product-price">650 EGP</span>
-                <div class="product-actions">
-                    <button class="btn-add-to-cart">ADD TO CART</button>
-                    
-                </div>
-            </div>
+        <small class="text-muted d-block mt-2">
+            Football Jersey
+        </small>
+        <div class="d-flex justify-content-between align-items-center my-1">
+            <h6 class="mb-0">
+                Liverpool Jersey
+            </h6>
+            <span class="fw-bold">
+                650 EGP
+            </span>
         </div>
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
     </div>
+
 </div>
 
 <!-- Product 3 -->
-<div class="col-12 col-md-6 col-lg-4">
-    <div class="product-card-horizontal">
-        <div class="product-image-container">
-            <img src="./assets/product_3_boots.png" alt="FOOTBALL BOOTS" class="product-image">
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_3_boots.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="FOOTBALL BOOTS">
+
         </div>
-        <div class="product-info-container">
-            <small class="product-category">FOOTBALL BOOTS</small>
-            <h6 class="product-title">Nike Football Boots</h6>
-            <div class="product-footer">
-                <span class="product-price">1400 EGP</span>
-                <div class="product-actions">
-                    <button class="btn-add-to-cart">ADD TO CART</button>
-                    
-                </div>
-            </div>
+
+        <small class="text-muted d-block mt-2">
+            FOOTBALL BOOTS
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Nike Football Boots
+            </h6>
+
+            <span class="fw-bold">
+                1400 EGP
+            </span>
+
         </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
     </div>
+
+</div>
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_3_boots.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="FOOTBALL BOOTS">
+
+        </div>
+
+        <small class="text-muted d-block mt-2">
+            FOOTBALL BOOTS
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Nike Football Boots
+            </h6>
+
+            <span class="fw-bold">
+                1400 EGP
+            </span>
+
+        </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
+    </div>
+
+</div>
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_3_boots.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="FOOTBALL BOOTS">
+
+        </div>
+
+        <small class="text-muted d-block mt-2">
+            FOOTBALL BOOTS
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Nike Football Boots
+            </h6>
+
+            <span class="fw-bold">
+                1400 EGP
+            </span>
+
+        </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
+    </div>
+
+</div>
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_3_boots.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="FOOTBALL BOOTS">
+
+        </div>
+
+        <small class="text-muted d-block mt-2">
+            FOOTBALL BOOTS
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Nike Football Boots
+            </h6>
+
+            <span class="fw-bold">
+                1400 EGP
+            </span>
+
+        </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
+    </div>
+
 </div>
 <!-- Product 4 -->
-<div class="col-12 col-md-6 col-lg-4">
-    <div class="product-card-horizontal">
-        <div class="product-image-container">
-            <img src="./assets/product_4_gloves.png" alt="Goalkeeper Gloves" class="product-image">
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_4_gloves.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="Goalkeeper Gloves">
+
         </div>
-        <div class="product-info-container">
-            <small class="product-category">GOALKEEPER</small>
-            <h6 class="product-title">Nike Goalkeeper Gloves</h6>
-            <div class="product-footer">
-                <span class="product-price">1500 EGP</span>
-                <div class="product-actions">
-                    <button class="btn-add-to-cart">ADD TO CART</button>
-                    
-                </div>
-            </div>
+
+        <small class="text-muted d-block mt-2">
+            GOALKEEPER
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Goalkeeper Gloves
+            </h6>
+
+            <span class="fw-bold">
+                900 EGP
+            </span>
+
         </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
     </div>
+
 </div>
 <!-- Product 5 -->
-<div class="col-12 col-md-6 col-lg-4">
-    <div class="product-card-horizontal">
-        <div class="product-image-container">
-            <img src="./assets/product_5_backpack.png" alt="SPORTS BAGS" class="product-image">
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_5_backpack.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="SPORTS BAGS">
+
         </div>
-        <div class="product-info-container">
-            <small class="product-category">SPORTS BAGS</small>
-            <h6 class="product-title">Adidas Sports Backpack</h6>
-            <div class="product-footer">
-                <span class="product-price">950 EGP</span>
-                <div class="product-actions">
-                    <button class="btn-add-to-cart">ADD TO CART</button>
-                    
-                </div>
-            </div>
+
+        <small class="text-muted d-block mt-2">
+            SPORTS BAGS
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Adidas Sports Backpack
+            </h6>
+
+            <span class="fw-bold">
+                950 EGP
+            </span>
+
         </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
     </div>
+
 </div>
 
 
 <!-- Product 6 -->
-<div class="col-12 col-md-6 col-lg-4">
-    <div class="product-card-horizontal">
-        <div class="product-image-container">
-            <img src="./assets/product_6_socks.png" alt="Sports Socks" class="product-image">
+<div class="col-sm-12 col-md-6 col-lg-4">
+
+    <div class="product-card">
+
+        <div class="ratio ratio-4x3 bg-light d-flex align-items-center justify-content-center">
+
+            <img
+                src="./assets/product_6_socks.png"
+                class="w-100 h-100 object-fit-contain"
+                alt="Sports Socks">
+
         </div>
-        <div class="product-info-container">
-            <small class="product-category">Sports Socks</small>
-            <h6 class="product-title">Nike Sports Socks</h6>
-            <div class="product-footer">
-                <span class="product-price">800 EGP</span>
-                <div class="product-actions">
-                    <button class="btn-add-to-cart">ADD TO CART</button>
-                    
-                </div>
-            </div>
+
+        <small class="text-muted d-block mt-2">
+            Sports Socks
+        </small>
+
+        <div class="d-flex justify-content-between align-items-center my-1">
+
+            <h6 class="mb-0">
+                Nike Sports Socks
+            </h6>
+
+            <span class="fw-bold">
+                800 EGP
+            </span>
+
         </div>
+
+        <button class="btn btn-outline-dark btn-sm w-100">
+            ADD TO CART
+        </button>
+
     </div>
+
 </div>
 
 </div>
@@ -318,7 +490,6 @@
 
     </div>
 </div>
-
 
 <!-- Start Footer -->
   <footer class="footer">
