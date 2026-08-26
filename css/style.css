@@ -342,7 +342,7 @@ flex-direction: column;
 }
 
 .form-check-input:checked {
-    background-color:black;
+    background-color:#28a745;
     border-color: black;
 }
 /* End Categories Page */
