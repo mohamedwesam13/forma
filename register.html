@@ -243,116 +243,78 @@
 
 
     <!-- JavaScript -->
-
     <script>
+    const form = document.getElementById("registerForm");
+    const fullName = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const message = document.getElementById("message");
 
-        const form = document.getElementById("registerForm");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Get values
+        const nameValue = fullName.value.trim();
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+        const confirmPasswordValue = confirmPassword.value.trim();
+        // Check empty fields
+        if (
+            nameValue === "" ||
+            emailValue === "" || passwordValue === "" ||
+            confirmPasswordValue === "")
+        {
+            message.style.display = "block";
+            message.className = "alert alert-danger";
+            message.textContent = "Please fill in all fields.";
+        }
 
-        const fullName = document.getElementById("fullName");
+        // Check email
+        else if (!emailValue.includes("@")) {
+            message.style.display = "block";
+            message.className = "alert alert-danger";
+            message.textContent = "Please enter a valid email.";
+        }
 
-        const email = document.getElementById("email");
+        // Check password length
+        else if (passwordValue.length < 6) {
+            message.style.display = "block";
+            message.className = "alert alert-danger";
+            message.textContent =
+                "Password must be at least 6 characters.";
+        }
 
-        const password = document.getElementById("password");
+        // Check passwords match
+        else if (passwordValue !== confirmPasswordValue) {
+            message.style.display = "block";
+            message.className = "alert alert-danger";
+            message.textContent = "Passwords do not match.";
+        }
 
-        const confirmPassword =
-            document.getElementById("confirmPassword");
+        // Create and save account
+        else {
 
-        const message = document.getElementById("message");
+            const user = {
+                fullName: nameValue,
+                email: emailValue,
+                password: passwordValue
+            };
 
+            // Save user in localStorage
+            localStorage.setItem("user", JSON.stringify(user)); 
 
-        form.addEventListener("submit", function(event) {
+            message.style.display = "block";
+            message.className = "alert alert-success";
+            message.textContent =
+                "Account created successfully!";
 
-            event.preventDefault();
+            //go to home
+            setTimeout(function(){
+                window.location.href="index.html"; 
+            }, 1500);
 
-
-            const nameValue = fullName.value.trim();
-
-            const emailValue = email.value.trim();
-
-            const passwordValue = password.value.trim();
-
-            const confirmPasswordValue =
-                confirmPassword.value.trim();
-
-
-            // Check empty fields
-
-            if (
-                nameValue === "" ||
-                emailValue === "" ||
-                passwordValue === "" ||
-                confirmPasswordValue === ""
-            ) {
-
-                message.style.display = "block";
-
-                message.className = "alert alert-danger";
-
-                message.textContent =
-                    "Please fill in all fields.";
-
-            }
-
-
-            // Check email
-
-            else if (!emailValue.includes("@")) {
-
-                message.style.display = "block";
-
-                message.className = "alert alert-danger";
-
-                message.textContent =
-                    "Please enter a valid email.";
-
-            }
-
-
-            // Check password length
-
-            else if (passwordValue.length < 6) {
-
-                message.style.display = "block";
-
-                message.className = "alert alert-danger";
-
-                message.textContent =
-                    "Password must be at least 6 characters.";
-
-            }
-
-
-            // Check passwords match
-
-            else if (passwordValue !== confirmPasswordValue) {
-
-                message.style.display = "block";
-
-                message.className = "alert alert-danger";
-
-                message.textContent =
-                    "Passwords do not match.";
-
-            }
-
-
-            // Success
-
-            else {
-
-                message.style.display = "block";
-
-                message.className = "alert alert-success";
-
-                message.textContent =
-                    "Account created successfully!";
-
-            }
-
-        });
-
+        }
+    });
     </script>
-
 </body>
-
 </html>
