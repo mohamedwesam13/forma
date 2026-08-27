@@ -336,8 +336,9 @@ flex-direction: column;
 /* Start Categories Page */
 
 .form-check-input {
-    border-color: black;
+    border-color: #28a745;
     box-shadow: none !important;
+    cursor: pointer; 
   
 }
 
