@@ -1,6 +1,6 @@
 
 let darkModeBtn = document.getElementById("darkModeToggle");
-if (localStorage.getItem("darkMode") === "on") {
+if (localStorage.getItem("darkMode") == "on") {
     document.body.classList.add("dark-mode");
     darkModeBtn.innerHTML = '<i class="bi bi-sun-fill"></i>';
 } else {
