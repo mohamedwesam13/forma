@@ -2,7 +2,7 @@
 
 const searchInput = document.getElementById("searchInput");
 
-const productCards = document.querySelectorAll(".product-card");
+const productCards = document.querySelectorAll(".product-card-horizontal");
 
 searchInput.addEventListener("input", function () {
 
